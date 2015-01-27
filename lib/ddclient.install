@@ -1,12 +1,14 @@
 #!/bin/bash
-read -p "Enter login: " LOGIN
+echo "INFO - Setup the dynamic IP service"
+read -p "Enter your provider" PROVIDER
+read -p "Enter Login: " LOGIN
 read -p "Enter password: " PASSWORD
 
 cat > /etc/ddclient.conf <<EOL
-protocol=namecheap
+protocol="${PROVIDER}"
 server=dynamicdns.park-your-domain.com
-login=${LOGIN}
-password=${PASSWORD}
+login="${LOGIN}"
+password="${PASSWORD}"
 ssl=yes
 @,www
 EOL

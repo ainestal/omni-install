@@ -9,7 +9,7 @@ function main_stack(){
 }
 
 function lxc(){
-    bash ${MY_PATH}/lib/lxc.install
+    . ${MY_PATH}/lib/lxc.install
     echo "INFO - Done !!!"
 }
 
