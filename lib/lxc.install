@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Enter name of the container: " CONTAINER_NAME
+
+#install and configure
+apt-get update && apt-get install lxc
+cat >> /etc/fstab <<EOL
+cgrouip         /sys/fs/cgroup  cgroup  defaults        0       0
+EOL
+#mount /sys/fs/cgroup
+mount -a
+
+#create container
+lxc-create -t debian -n ${CONTAINER_NAME}
+
+#start container and login
+lxc-start -n ${CONTAINER_NAME} --daemon
