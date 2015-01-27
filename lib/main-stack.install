@@ -8,6 +8,3 @@ apt-get install alien
 a2enmod proxy
 #ToDo: add the apache configuration
 
-#configure dynamic ip
-apt-get install ddclient
-. ${MY_PATH}/lib/ddclient.install
