@@ -2,7 +2,12 @@
 
 read "Name of the container: " CONTAINER_NAME
 
+#install and configure
 apt-get update && apt-get install lxc
+cat >> /etc/fstab <<EOL
+cgrouip         /sys/fs/cgroup  cgroup  defaults        0       0
+EOL
+
 #create container
 lxc-create -t ubuntu -m ${CONTAINER_NAME}
 
