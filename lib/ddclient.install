@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "INFO - Setup the dynamic IP service"
-read -p "Enter your provider" PROVIDER
-read -p "Enter Login: " LOGIN
-read -p "Enter password: " PASSWORD
+read -p "Enter your provider : " PROVIDER
+read -p "Enter Login         : " LOGIN
+read -p "Enter password      : " PASSWORD
 
 cat > /etc/ddclient.conf <<EOL
 protocol="${PROVIDER}"
