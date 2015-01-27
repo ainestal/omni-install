@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read "Name of the container: " CONTAINER_NAME
+
+apt-get update && apt-get install lxc
+#create container
+lxc-create -t ubuntu -m ${CONTAINER_NAME}
+
+#start container and login
+lxc-start -n ${CONTAINER_NAME}
