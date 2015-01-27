@@ -11,3 +11,4 @@ a2enmod proxy
 
 #configure dynamic ip
 apt-get install ddclient
+bash ddclient.install
