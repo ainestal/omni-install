@@ -7,6 +7,7 @@ apt-get update && apt-get install lxc
 cat >> /etc/fstab <<EOL
 cgrouip         /sys/fs/cgroup  cgroup  defaults        0       0
 EOL
+mount /sys/fs/cgroup
 
 #create container
 lxc-create -t ubuntu -m ${CONTAINER_NAME}
