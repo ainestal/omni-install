@@ -12,7 +12,7 @@ function lxc(){
     echo "INFO - Done !!!"
 }
 
-
+apt-get install dialog
 cmd=(dialog --separate-output --checklist "Select options:" 10 76 10)
 options=(1 "Install main stack for a standalone server" off    # any option can be set to default to "on"
          2 "LXC install and create container" off)
