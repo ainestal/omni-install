@@ -1,6 +1,8 @@
 apt-get update
 apt-get install nmap htop apache2 mongodb python-virtualenv vim
 
+echo 'syntax on' >> .vimrc
+
 #to install rpm on debian
 apt-get install alien
 
