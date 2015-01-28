@@ -1,6 +1,7 @@
 #!/bin/bash
 
 read -p "Enter name of the container: " CONTAINER_NAME
+read -p "Enter technology to use    : " TECH
 
 #install and configure
 apt-get update && apt-get install lxc
@@ -11,7 +12,7 @@ EOL
 mount -a
 
 #create container
-lxc-create -t debian -n ${CONTAINER_NAME}
+lxc-create -t ${TECH} -n ${CONTAINER_NAME}
 
 #start container and login
 lxc-start -n ${CONTAINER_NAME} --daemon
