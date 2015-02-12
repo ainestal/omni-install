@@ -1,6 +1,14 @@
-echo "deb http://http.debian.net/debian wheezy-backports main" >> /etc/apt/sources.list
+###### Debian
+#echo "deb http://http.debian.net/debian wheezy-backports main" >> /etc/apt/sources.list
 
+#apt-get update
+#apt-get install -t wheezy-backports linux-image-amd64 curl
+
+#curl -sSL https://get.docker.com/ | sh
+#########
+
+###### Ubuntu
 apt-get update
-apt-get install -t wheezy-backports linux-image-amd64 curl
-
-curl -sSL https://get.docker.com/ | sh
+apt-get install docker.io
+source /etc/bash_completion.d/docker.io
+######
