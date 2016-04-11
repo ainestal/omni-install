@@ -14,16 +14,16 @@ for choice in $choices
 do
     case $choice in
         1)
-            . ${MY_PATH}/lib/main-stack.install
+            . ${MY_PATH}/lib/main-stack.install.sh
             ;;
         2)
-            . ${MY_PATH}/lib/lxc.install
+            . ${MY_PATH}/lib/lxc.install.sh
             ;;
         3)
-            . ${MY_PATH}/lib/ddclient.install
+            . ${MY_PATH}/lib/ddclient.install.sh
             ;;
         4)
-            . ${MY_PATH}/lib/docker.install
+            . ${MY_PATH}/lib/docker.install.sh
             ;;
     esac
 done
